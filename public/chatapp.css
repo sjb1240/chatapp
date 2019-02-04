@@ -1,36 +1,37 @@
-html{
+html {
   background-color: #282828;
 }
-#chat_container{
+
+#chat_container {
   text-align: center;
   background-color: #282828;
 }
 
-#chat{
+#chat {
   display: inline-block;
-  width:auto;
-  height:auto;
+  width: auto;
+  height: auto;
   background-color: #282828;
   font-family: OCR A Std, monospace;
   color: #e9ffe5;
-/*  border: ridge 15px;
+  /*  border: ridge 15px;
   border-color: #e5fffb;
   padding: 10px; */
 }
 
-#formA{
+#formA {
   display: inline-block;
-  width:auto;
+  width: auto;
   height: auto;
-  color:white;
+  color: white;
 }
 
-#formA_container{
+#formA_container {
   margin-top: 25px;
   text-align: left;
 }
 
-input[name='name']{
+input[name='name'] {
   height: 40px;
   width: 100px;
   font-size: 32px;
@@ -38,7 +39,8 @@ input[name='name']{
   border: none;
   color: white;
 }
-textarea[name='message']{
+
+textarea[name='message'] {
   height: 100px;
   width: 500px;
   font-size: 32px;
@@ -46,7 +48,8 @@ textarea[name='message']{
   border: none;
   color: white;
 }
-button[type="submit"]{
+
+button {
   height: 40px;
   width: 60px;
   background: none;

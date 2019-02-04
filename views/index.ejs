@@ -13,9 +13,10 @@
     <form action='/quotes' method='POST' id=formA>
       <input type='text' placeholder="name" name="name" required autocomplete="off"> </input>
       <br>
-      <textarea rows="3" type='text' placeholder="write your post" name="message" required> </textarea>
+      <inputtype='text' placeholder="write your post" name="message" required> </input>
       <br>
       <button type='submit'><i class='fas fa-paper-plane' style='color:white; font-size: 20px'></i></button>
+      <button type='delete'><i class='fas fa-dumpster-fire' style='color:white; font-size: 20px'></i></button>
     </form>
   </div>
 
@@ -28,7 +29,8 @@
         <%= quotes[i].name + ': ' + quotes[i].message %>
       </h2>
       <p>
-        <%='date: ' + now %>
+        posted at
+        <%= quotes[i].time %>
       </p>
       <hr>
       <% } %>
