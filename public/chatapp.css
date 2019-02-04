@@ -42,7 +42,7 @@ input[name='name'] {
 
 input[name='message'] {
   height: 100px;
-  width: 500px;
+  width: 250px;
   font-size: 32px;
   background-color: #282828;
   border: none;
