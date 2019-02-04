@@ -17,9 +17,9 @@ MongoClient.connect('mongodb://public:public50@ds121295.mlab.com:21295/chatapp',
   (err, client) => {
     if (err) return console.log(err)
     db = client.db('chatapp')
-    app.listen(process.env.PORT || 3000, function() {
-      console.log('Listening on 3000')
-    })
+    app.listen(process.env.PORT || 3000, () => {
+			console.log('listening on 3000')
+		})
   }
 )
 
