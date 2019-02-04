@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="chatapp.css">
+</head>
+
+<body>
+
+  <div id='formA_container'>
+    <form action='/quotes' method='POST' id=formA>
+      <input type='text' placeholder="name" name="name" required autocomplete="off"> </input>
+      <br>
+      <input type='text' placeholder="write your post" name="message" required> </input>
+      <br>
+      <button type='submit'><i class='fas fa-paper-plane' style='color:white; font-size: 20px'></i></button>
+    </form>
+  </div>
+
+
+  <div id='chat_container'>
+    <div id='chat'>
+      <% quotes.reverse() %>
+      <% for(var i = 0; i<quotes.length; i++) {%>
+      <h2>
+        <%= quotes[i].name + ': ' + quotes[i].message %>
+      </h2>
+      <p>
+        <%='date: ' + now %>
+      </p>
+      <hr>
+      <% } %>
+    </div>
+  </div>
+
+</body>
+
+</html>
