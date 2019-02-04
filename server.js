@@ -28,7 +28,7 @@ app.get('/', function(req, res) {
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err)
     var time = new Date();
-    var now = ( /*time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + '   ' + */ time.getDate() + "/" + time.getMonth()+1 + "/" + time.getFullYear());
+    var now = ( /*time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds() + '   ' + */ time.getDate() + "/" + time.getMonth() + "/" + time.getFullYear());
     res.render('index.ejs', {
       quotes: result,
       now

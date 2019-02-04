@@ -38,8 +38,8 @@ input[name='name']{
   border: none;
   color: white;
 }
-input[name='message']{
-  height: 40px;
+textarea[name='message']{
+  height: 100px;
   width: 500px;
   font-size: 32px;
   background-color: #282828;
