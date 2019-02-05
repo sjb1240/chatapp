@@ -49,7 +49,7 @@ input[name='message'] {
   color: white;
 }
 
-button {
+button[type='submit'] {
   height: 40px;
   width: 60px;
   background: none;

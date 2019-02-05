@@ -70,12 +70,12 @@ app.post('/quotes', (req, res) => {
   //console.log(req.body)
 })
 
-app.post('delete', (req, res) => {
-      db.collection("quotes").deleteMany({}, function(err, obj) {
-        if (err) throw err;
-        console.log(obj.result.n + " document(s) deleted");
-        db.close();
-      });
-    });
-
+app.delete('/quotes', (req, res) => {
+  db.collection('quotes').deleteMany({},
+  (err, result) => {
+    if (err) return res.send(500, err)
+    res.send({message: 'Success'})
+	console.log("database cleared")
+  })
+})
     console.log("Yalla, you're up and running");

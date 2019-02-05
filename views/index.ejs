@@ -17,9 +17,10 @@
       <br>
       <button type='submit'><i class='fas fa-paper-plane' style='color:white; font-size: 20px'></i></button>
     </form>
-    <button type='delete'><i class='fas fa-dumpster-fire' style='color:white; font-size: 20px'></i></button>
+
   </div>
 
+  <button type='delete' style="position: fixed; bottom: 20px; right: 20px;"><i class='fas fa-dumpster-fire' style='position: fixed; bottom: 20px; right: 20px; color:white; font-size: 120px' id='delete'></i></button>
 
   <div id='chat_container'>
     <div id='chat'>
@@ -36,7 +37,21 @@
       <% } %>
     </div>
   </div>
+  <script>
+    var del = document.getElementById('delete')
 
+    del.addEventListener('click', function() {
+      fetch('quotes', {
+          method: 'delete',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(res => {
+          window.location.reload()
+        })
+    })
+  </script>
 </body>
 
 </html>
